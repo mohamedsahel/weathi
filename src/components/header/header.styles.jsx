@@ -1,0 +1,36 @@
+import styled from 'styled-components'
+
+import { LocationMarkerIcon } from '@icons'
+
+export const Container = styled.header`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 1.6rem;
+    padding-bottom: 4rem;
+    overflow-x: hidden;
+`
+
+export const LocationContainer = styled.div`
+    display: inline-flex;
+    align-items: center;
+    margin-left: 3rem;
+`
+
+export const _LocationMarker = styled(LocationMarkerIcon)`
+    height: 1.8rem;
+    width: 1.8rem;
+    margin-right: 1.2rem;
+    fill: ${p => p.theme.colors.dark};
+`
+
+export const LocationTitle = styled.h4`
+    font-size: 1.7rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+` 

@@ -8,10 +8,9 @@ export const Container = styled.div`
     border-radius: 1.6rem;
     padding: 1.6rem;
     background: white;
-    margin: 2rem;
-    max-width: 85%;
+    max-width: 95%;
     border: 0.05rem solid rgba(0, 0, 0, 0.01);
-    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.05);
+    box-shadow: 0rem 1rem 4em rgba(0, 0, 0, 0.05);
 `
 
 export const Input = styled.input`
@@ -20,7 +19,7 @@ export const Input = styled.input`
     font-size: 1.4rem;
     background: transparent;
     border: none;
-    transition: all 0.4s;
+    transition: all 0.3s;
 
     ${p => p.isExpanded && css`
         width: 24rem;

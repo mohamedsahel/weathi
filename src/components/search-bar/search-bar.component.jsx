@@ -11,7 +11,12 @@ const SearchBar = () => {
 
     const handleIconClick = () => {
         if(isLarg) return 
-        else setExpanded(!isExpanded)
+        else {
+            if(!isExpanded) inputRef.current.focus()
+            if(!isExpanded) inputRef.current.blur()
+            setExpanded(!isExpanded)
+            
+        }
     }
 
     const handleInputBlur = () => {
