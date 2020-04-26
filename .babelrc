@@ -1,0 +1,16 @@
+{
+    "plugins": [
+      [
+        "module-resolver",
+        {
+          "root": ["./src"],
+          "alias": {
+            "@components": "./src/components",
+            "@icons": "./src/assests/icons",
+            "@utils": "./src/global/utils",
+            "@hooks": "./src/hooks"
+          }
+        }
+      ]
+    ]
+}
