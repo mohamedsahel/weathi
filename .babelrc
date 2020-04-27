@@ -7,7 +7,7 @@
           "alias": {
             "@components": "./src/components",
             "@icons": "./src/assests/icons",
-            "@utils": "./src/global/utils",
+            "@global": "./src/global",
             "@hooks": "./src/hooks"
           }
         }

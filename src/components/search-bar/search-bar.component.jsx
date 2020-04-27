@@ -1,22 +1,16 @@
 import React from 'react'
 
-import { useMediaQuery } from '@hooks'
-
 import * as S from './search-bar.styles'
 
-const SearchBar = () => {
-    const isLarg = useMediaQuery('(min-width: 600px)') 
+const SearchBar = ({ parentWidth }) => {
+    const isLarg = parentWidth > 600
     const [isExpanded, setExpanded] = React.useState(isLarg)
     const inputRef = React.useRef()
 
     const handleIconClick = () => {
         if(isLarg) return 
-        else {
-            if(!isExpanded) inputRef.current.focus()
-            if(!isExpanded) inputRef.current.blur()
-            setExpanded(!isExpanded)
-            
-        }
+        setExpanded(!isExpanded)
+        inputRef.current.focus()
     }
 
     const handleInputBlur = () => {

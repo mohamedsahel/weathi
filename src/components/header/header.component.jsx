@@ -2,6 +2,8 @@ import React from 'react'
 
 import { SearchBar } from '@components'
 
+import { useElementSize } from '@hooks'
+
 import * as S from './header.styles'
 
 const CurrentLocation = ({ location }) => (
@@ -12,9 +14,12 @@ const CurrentLocation = ({ location }) => (
 )
 
 const Header = () => {
+    const ref = React.useRef()
+    const {width} = useElementSize(ref)
+
     return (
-        <S.Container>
-            <SearchBar />
+        <S.Container ref={ref} >
+            <SearchBar parentWidth={width} />
             <CurrentLocation location='Paris, Frensh' />
         </S.Container>
     )

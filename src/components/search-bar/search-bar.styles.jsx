@@ -32,7 +32,7 @@ export const Input = styled.input`
 `
 
 export const _SearchIcon = styled(SearchIcon)`
-    width: 1.8rem;
-    height: 1.8rem;
+    min-width: 1.8rem;
+    min-height: 1.8rem;
     fill: ${p => p.theme.colors.gray_2}
 `

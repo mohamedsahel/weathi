@@ -18,7 +18,7 @@ export const Container = styled.header`
 export const LocationContainer = styled.div`
     display: inline-flex;
     align-items: center;
-    margin-left: 3rem;
+    margin-left: 6rem;
 `
 
 export const _LocationMarker = styled(LocationMarkerIcon)`
