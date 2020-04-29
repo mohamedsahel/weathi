@@ -9,7 +9,9 @@ export const Container = styled.header`
     width: 100%;
     max-width: 100%;
     padding-bottom: 4rem;
-    overflow-x: hidden;
+    overflow: hidden;
+    z-index: 4;
+    padding-top: 1.6rem;
 `
 
 export const LocationContainer = styled.div`

@@ -7,8 +7,8 @@ import * as S from './mainpage.styles'
 const MainPage = () => {
     return (
         <S.Container>
-            <WeatherSection />
-            <MapSection />
+            <MapSection className='map-section' />
+            <WeatherSection className='weather-section' />
         </S.Container>
     )
 }

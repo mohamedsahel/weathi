@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { TempDegree } from '@components'
+
 import * as S from './sammary.styles'
 
 const Sammary = () => {
@@ -7,9 +9,7 @@ const Sammary = () => {
         <S.Container >
             <S._Time />
             <S._WeatherIcon icon='01d' />
-            <S.Temp>
-                20<S.Degree>&#176;</S.Degree>
-            </S.Temp>
+            <TempDegree value='20' size='14rem' />
         </S.Container>
     )
 }

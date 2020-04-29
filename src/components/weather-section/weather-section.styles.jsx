@@ -5,6 +5,8 @@ export const Container = styled.div`
     z-index: 2;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     background: ${p => p.theme.colors.light};
     padding: 1.6rem;
+    padding-top: 0;
 `

@@ -73,7 +73,8 @@ const GlobalStyle = createGlobalStyle`
       }
 
       *::-webkit-scrollbar {
-        width: 1rem;
+        width: 0.6rem;
+        height: 0.6rem;
       }
 
       *::-webkit-scrollbar-thumb {
