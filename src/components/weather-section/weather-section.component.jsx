@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Header, Sammary, WeatherTable } from '@components'
+import { Header, Sammary, Tabs } from '@components'
 
 import * as S from './weather-section.styles'
 
@@ -9,7 +9,7 @@ const WeatherSection = () => {
         <S.Container id='weather-section' >
             <Header />
             <Sammary />
-            <WeatherTable />
+            <Tabs />
         </S.Container>
     )
 }
