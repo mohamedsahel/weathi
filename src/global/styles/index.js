@@ -29,11 +29,12 @@ const GlobalStyle = createGlobalStyle`
 
     html {
       box-sizing: border-box;
+      font-family: ${p => p.theme.font};
       font-size: 62.7%;
     }
 
     body {
-      background-color: ${p => p.theme.colors.light};
+      background-color: ${p => p.theme.colors.white};
       color: ${p => p.theme.colors.dark};
       font-family: ${p => p.theme.font};
     }

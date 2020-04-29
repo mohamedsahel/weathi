@@ -1,4 +1,5 @@
 const communStyles = {
+    font: "'roboto', 'Baloo Tamma 2', cursive",
     radius: {
 
     },

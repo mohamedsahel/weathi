@@ -16,7 +16,7 @@ export const Container = styled.div`
 export const Input = styled.input`
     width: 0;
     padding: 0;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     background: transparent;
     border: none;
     transition: all 0.3s;
@@ -27,6 +27,7 @@ export const Input = styled.input`
     ` }
 
     &::placeholder {
+        font-size: 1.4rem;
         color: ${p => p.theme.colors.gray_1};
     }
 `

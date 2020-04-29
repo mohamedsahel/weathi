@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Header } from '@components'
+import { Header, Time } from '@components'
 
 import * as S from './weather-section.styles'
 
@@ -8,6 +8,7 @@ const WeatherSection = () => {
     return (
         <S.Container >
             <Header />
+            <Time />
         </S.Container>
     )
 }
