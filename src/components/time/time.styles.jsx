@@ -1,12 +1,8 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    margin-top: 12rem;
-    width: 60rem;
-    
-    > * {
-        display: block;
-    }
+    display: inline-flex;
+    flex-direction: column;
 `
 
 export const Time = styled.span`

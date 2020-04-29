@@ -1,17 +1,24 @@
 import React from 'react'
 
-export default function useElementSize(ref) {
+export default function useElementSize(element) {
     const [size, setSize] = React.useState({})
 
     // ref.current.getBoundingClientRect().toJSON()
     
     React.useLayoutEffect(() => {
-        if(!ref) return
+        if(!element) return
         
+        let el;
+        if(typeof element === 'string') {
+            el = document.querySelector(element)
+        } else if (typeof element === 'object') {
+            el = element.current
+        }
+
         const handleResize = () => {
             setSize({
-                width: ref.current.offsetWidth,
-                height: ref.current.offsetHeight
+                width: el.offsetWidth,
+                height: el.offsetHeight
             })
         }
 
@@ -23,7 +30,7 @@ export default function useElementSize(ref) {
             window.removeEventListener('resize', handleResize)
         }
         
-    }, [ref])
+    }, [element])
 
     return size
 }

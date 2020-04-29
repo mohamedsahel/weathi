@@ -1,14 +1,14 @@
 import React from 'react'
 
-import { Header, Time } from '@components'
+import { Header, Sammary } from '@components'
 
 import * as S from './weather-section.styles'
 
 const WeatherSection = () => {
     return (
-        <S.Container >
+        <S.Container id='weather-section' >
             <Header />
-            <Time />
+            <Sammary />
         </S.Container>
     )
 }

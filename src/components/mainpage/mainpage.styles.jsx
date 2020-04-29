@@ -5,15 +5,16 @@ export const Container = styled.div`
     flex-direction: column;
     min-height: 100vh;
     align-items: stretch;
-
     > * {
-        flex: 1;
+        overflow: hidden;
     }
+
+
 
     @media (min-width: 800px) {
         flex-direction: row-reverse;
         > * {
-            flex: 1;
+            width: 50%;
         }
     }
 `

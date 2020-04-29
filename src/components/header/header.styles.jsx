@@ -6,11 +6,8 @@ export const Container = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
-    top: 0;
     width: 100%;
     max-width: 100%;
-    padding: 1.6rem;
     padding-bottom: 4rem;
     overflow-x: hidden;
 `
