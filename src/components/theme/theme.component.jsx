@@ -1,15 +1,16 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
 
-import { useMode } from '@hooks'
+import ModeContext from '../../providers/mode/mode.context'
 import { lightTheme, darkTheme } from '../../global/data/theme'
 
 const Theme = ({ children }) => {
-    const [mode] = useMode()
+    const [mode] = React.useContext(ModeContext)
+    console.log(mode)
     return (
         <ThemeProvider 
         theme={mode === 'light' ? lightTheme : darkTheme} > 
-            { children } 
+                { children } 
         </ThemeProvider>
     )
 }

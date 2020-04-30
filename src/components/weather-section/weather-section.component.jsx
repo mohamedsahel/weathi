@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Header, Sammary, Tabs } from '@components'
+import { Header, Sammary, Tabs, ModeToggler } from '@components'
 
 import * as S from './weather-section.styles'
 
@@ -10,6 +10,7 @@ const WeatherSection = () => {
             <Header />
             <Sammary />
             <Tabs />
+            <ModeToggler />
         </S.Container>
     )
 }

@@ -1,17 +1,20 @@
 import React from 'react'
 import { Theme, MainPage } from '@components'
 
+import ModeProvider from '../providers/mode/mode.provider'
+
 import GlobalStyles from '../global/styles'
 // import * as S from './app.styles'
 
 function App() {
 
   return (
-    <Theme>
-      <GlobalStyles />
-      <MainPage />
-    </Theme>
-
+    <ModeProvider>
+        <Theme>
+          <GlobalStyles />
+          <MainPage />
+        </Theme>
+    </ModeProvider>
   )
 }
 
