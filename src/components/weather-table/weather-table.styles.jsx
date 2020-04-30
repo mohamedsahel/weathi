@@ -29,8 +29,12 @@ export const TableRow = styled.div`
 `
 
 export const Table = styled.div`
-    display: flex;
-    justify-content: space-between;
     width: 100%;
     overflow-x: scroll;
+    overflow-y: hidden;
+
+    > * {
+        display: flex;
+        justify-content: space-between;
+    }
 `

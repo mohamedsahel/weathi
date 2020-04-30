@@ -1,4 +1,5 @@
 import React from 'react'
+import FadeIn from 'react-fade-in'
 
 import { TempDegree, WeatherIcon } from "@components";
 
@@ -18,11 +19,13 @@ const WeatherTableRow = (props) => {
 const WeatherTable = () => {
     return (
         <S.Table >
-            <WeatherTableRow selected={true} />
-            <WeatherTableRow />
-            <WeatherTableRow />
-            <WeatherTableRow />
-            <WeatherTableRow />
+            <FadeIn>
+                <WeatherTableRow selected={true} />
+                <WeatherTableRow />
+                <WeatherTableRow />
+                <WeatherTableRow />
+                <WeatherTableRow />
+            </FadeIn>
         </S.Table>
     )
 }

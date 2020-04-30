@@ -1,4 +1,5 @@
 import React from 'react'
+import FadeIn from 'react-fade-in'
 
 import { CityCard } from '@components'
 
@@ -30,9 +31,11 @@ const CITIES = [
 const CitiesPreview = ({cities=CITIES, ...otherProps}) => {
     return (
         <S.Container {...otherProps}>
-            {
-                CITIES.map((city, index) => <CityCard  city={city} key={index} />)
-            }
+            <FadeIn>
+                {
+                    CITIES.map((city, index) => <CityCard  city={city} key={index} />)
+                }
+            </FadeIn>
         </S.Container>
     )
 

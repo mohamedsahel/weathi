@@ -1,9 +1,10 @@
 import styled, { css } from 'styled-components'
 
 export const Container = styled.div`
-    min-width: 12rem;
-    min-height: 15rem;
-    margin-right: 5%;
+    display: inline-block;
+    width: 12rem;
+    height: 15rem;
+    margin-right: 2rem;
     margin-bottom: 3rem;
     border-radius: 3rem;
     box-shadow: 1rem 1rem 4em rgba(0, 0, 0, 0.1);

@@ -9,6 +9,7 @@
     "babel-plugin-module-resolver": "^4.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-fade-in": "^1.0.0",
     "react-scripts": "3.4.1",
     "styled-components": "^5.1.0"
   },
