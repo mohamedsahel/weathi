@@ -1,4 +1,16 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
+
+import { WeatherIcon } from '@components'
+
+export const _WeatherIcon = styled(WeatherIcon)`
+    height: 2.8rem;
+    width: 2.8rem;
+    top: 0.8rem;
+
+    path {
+        stroke: white;
+    }
+`
 
 export const Container = styled.div`
     display: inline-block;
@@ -17,12 +29,6 @@ export const Container = styled.div`
     > * {
         position: absolute;
         left: 1.4rem;
-    }
-
-    svg {
-        height: 3rem;
-        width: 3rem;
-        top: 0.8rem;
     }
 
     span {

@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import { WeatherIcon, Time } from '@components'
 
@@ -15,6 +15,10 @@ export const _Time = styled(Time)`
 `
 
 export const _WeatherIcon = styled(WeatherIcon)`
-    width: 6rem;
-    height: 6rem;
+    width: 5.2rem;
+    height: 5.2rem;
+
+    path {
+        stroke: ${p => p.theme.colors.dark};
+    }
 `

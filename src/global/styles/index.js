@@ -67,6 +67,7 @@ const GlobalStyle = createGlobalStyle`
       max-height: 100%;
     }
 
+
     @media (pointer: fine) and (hover: hover) {
       *::-webkit-scrollbar-track {
         border-radius: 1rem;

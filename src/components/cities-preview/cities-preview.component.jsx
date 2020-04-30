@@ -31,7 +31,7 @@ const CITIES = [
 const CitiesPreview = ({cities=CITIES, ...otherProps}) => {
     return (
         <S.Container {...otherProps}>
-            <FadeIn>
+            <FadeIn className='fadeIn' >
                 {
                     CITIES.map((city, index) => <CityCard  city={city} key={index} />)
                 }

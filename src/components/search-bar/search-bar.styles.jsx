@@ -28,12 +28,12 @@ export const Input = styled.input`
 
     &::placeholder {
         font-size: 1.4rem;
-        color: ${p => p.theme.colors.gray_1};
+        color: rgb(217, 216, 220);
     }
 `
 
 export const _SearchIcon = styled(SearchIcon)`
     min-width: 1.8rem;
     min-height: 1.8rem;
-    fill: ${p => p.theme.colors.gray_2}
+    fill: rgb(154, 161, 181);
 `

@@ -11,7 +11,7 @@ const TABS = {
 }
 
 const Tabs = (props) => {
-    const [currentTab, setCurrentTab] = React.useState(1)
+    const [currentTab, setCurrentTab] = React.useState(2)
     
     return (
         <S.Container {...props}>

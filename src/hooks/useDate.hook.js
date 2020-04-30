@@ -22,7 +22,7 @@ export default function useDate(refreshDelay) {
         }, refreshDelay)
 
         return () => clearInterval(id)
-    }, [])
+    }, [refreshDelay])
 
     return date
 }

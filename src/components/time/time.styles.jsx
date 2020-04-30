@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
     display: inline-flex;
     flex-direction: column;
+    align-items: flex-end;
 `
 
 export const Time = styled.span`
@@ -11,5 +12,5 @@ export const Time = styled.span`
 
 export const Date = styled.span`
     font-size: 1.4rem;
-    color: ${p => p.theme.colors.halfDark}
+    color: ${p => p.theme.colors.halfDark};
 `
