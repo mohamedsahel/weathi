@@ -6,7 +6,6 @@ import { lightTheme, darkTheme } from '../../global/data/theme'
 
 const Theme = ({ children }) => {
     const [mode] = React.useContext(ModeContext)
-    console.log(mode)
     return (
         <ThemeProvider 
         theme={mode === 'light' ? lightTheme : darkTheme} > 

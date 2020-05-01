@@ -1,8 +1,15 @@
 import React from 'react'
 
-const MapSection = (props) => <div 
-{...props}
-style={{background: 'rgb(123, 216, 134)'}} 
-></div>
+import { Marker } from '@components'
+
+const MapSection = (props) => {
+    return (
+    <div  id='map' {...props} >
+        {/* <Marker lat='-34.397' lng='120' />
+        <Marker lat='-34.397' lng='180' /> */}
+        <Marker lat='30' lng='-10' />
+    </div>
+)
+}
 
 export default MapSection
