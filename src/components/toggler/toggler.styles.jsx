@@ -5,8 +5,8 @@ export const Container = styled.div`
     height: 4.2rem;
     border-radius: 50%;
     box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.1);
-    background: ${p => p.theme.colors.white};
-    padding: 1rem;
+    background: white;
+    padding: 0.8rem;
     overflow: hidden;
 
     @media (pointer: fine) and (hover: hover) {
@@ -16,10 +16,17 @@ export const Container = styled.div`
 
 export const Scroller = styled.div`
     transition: 0.3s transform ease-out; 
-    height: 4.2rem;
+    height: 250%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    svg {
+        height: 37%;
+    }
 
     ${p => !p.isDefault && css`
-        transform: translateY(-82%);
+        transform: translateY(-62%);
     `}
 `
 

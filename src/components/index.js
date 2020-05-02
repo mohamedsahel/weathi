@@ -2,6 +2,7 @@ export { default as Theme } from './theme/theme.component'
 
 export { default as Toggler } from './toggler/toggler.component'
 export { default as ModeToggler } from './mode-toggler/mode-toggler.component'
+export { default as MapToggler } from './map-toggler/map-toggler.component'
 export { default as SearchBar } from './search-bar/search-bar.component'
 export { default as Header } from './header/header.component'
 export { default as Time } from './time/time.component'

@@ -1,16 +1,15 @@
 import React from 'react'
 
-import { Header, Sammary, Tabs, ModeToggler } from '@components'
+import { Header, Sammary, Tabs } from '@components'
 
 import * as S from './weather-section.styles'
 
-const WeatherSection = () => {
+const WeatherSection = (props) => {
     return (
-        <S.Container id='weather-section' >
+        <S.Container id='weather-section' {...props} >
             <Header />
             <Sammary />
             <Tabs />
-            <ModeToggler />
         </S.Container>
     )
 }

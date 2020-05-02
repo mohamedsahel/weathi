@@ -2,6 +2,8 @@ import { ReactComponent as SearchIcon } from './search.icon.svg'
 import { ReactComponent as LocationMarkerIcon } from './locationMarker.icon.svg'
 import { ReactComponent as SunIcon } from './sun.icon.svg'
 import { ReactComponent as MoonIcon } from './moon.icon.svg'
+import { ReactComponent as MapIcon } from './map.icon.svg'
+import { ReactComponent as CloseIcon } from './close.icon.svg'
 
 import { ReactComponent as Icon_01d } from './01d.svg'
 import { ReactComponent as Icon_02d } from './02d.svg'
@@ -23,6 +25,8 @@ export {
     LocationMarkerIcon,
     SunIcon,
     MoonIcon,
+    MapIcon,
+    CloseIcon,
     Icon_01d,
     Icon_02d,
     Icon_03d,
