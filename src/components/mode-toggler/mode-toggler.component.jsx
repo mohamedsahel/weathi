@@ -1,23 +1,19 @@
 import React from 'react'
 
-import ModeContext from '../../providers/mode/mode.context'
-
-import { SunIcon, MoonIcon } from '@icons'
+import ModeContext from '@providers/mode/mode.context'
 
 import * as S from './mode-toggler.styles'
 
 const ModeToggler = props => {
     const [mode, toggleMode] = React.useContext(ModeContext)
     return (
-        <S.Container 
-        {...props} 
+        <S._Toggler 
+        {...props}
+        icon1='SunIcon'
+        icon2='MoonIcon'
         onClick={toggleMode}
-        >
-            <S.Scroller mode={mode} >
-                <SunIcon />
-                <MoonIcon />
-            </S.Scroller>
-        </S.Container>
+        isDefault={mode === 'light'}
+        />
     )
 }
 

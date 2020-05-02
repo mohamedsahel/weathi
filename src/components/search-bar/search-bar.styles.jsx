@@ -11,6 +11,8 @@ export const Container = styled.div`
     max-width: 95%;
     border: 0.05rem solid rgba(0, 0, 0, 0.01);
     box-shadow: 0rem 1rem 4em rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 4;
 `
 
 export const Input = styled.input`

@@ -6,5 +6,4 @@ export const Container = styled.div`
     background: ${p => p.theme.colors.light};
     padding: 1.6rem;
     padding-top: 0;
-    position: relative;
 `
