@@ -8,8 +8,18 @@ const MapProvider = ({ id, children }) => {
     const options = {
         center: {lat: 0, lng: 0},
         zoom: 2,
+        minZoom: 2,
         disableDefaultUI: true,
-        gestureHandling: "greedy"
+        gestureHandling: "greedy",
+        restriction: {
+            latLngBounds: {
+                north: 85,
+                south: -85,
+                west: -180,
+                east: 180,
+              },
+            strictBounds: false,
+        }
       }
 
     let [map, setMap] = React.useState(null)

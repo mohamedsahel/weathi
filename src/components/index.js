@@ -15,7 +15,7 @@ export { default as CitiesPreview } from './cities-preview/cities-preview.compon
 export { default as Tabs } from './tabs/tabs.component'
 export { default as WeatherSection } from './weather-section/weather-section.component'
 export { default as Marker } from './marker/marker.component'
-export { default as MapPopup } from './map-popup/map-popup.component'
+export { default as MapPopupContainer } from './map-popup-container/map-popup-container.component'
 export { default as Map } from './map/map.component'
 export { default as MapSection } from './map-section/map-section.component'
 export { default as MainPage } from './mainpage/mainpage.component'

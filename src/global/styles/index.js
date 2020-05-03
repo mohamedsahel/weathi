@@ -67,6 +67,9 @@ const GlobalStyle = createGlobalStyle`
       max-height: 100%;
     }
 
+    img[src='https://maps.gstatic.com/mapfiles/api-3/images/google4.png'] {
+      display: none !important;
+    }
 
     @media (pointer: fine) and (hover: hover) {
       *::-webkit-scrollbar-track {
