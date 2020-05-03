@@ -2,21 +2,9 @@ import styled from 'styled-components'
 
 import { MapSection, WeatherSection } from '@components'
 
-export const _WeatherSection = styled(WeatherSection)`
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-`
+export const _WeatherSection = styled(WeatherSection)``
 
 export const _MapSection = styled(MapSection)`
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: ${p => p.top ? 3 : -1} ;
 `
 
 export const Container = styled.div`
@@ -34,5 +22,18 @@ export const Container = styled.div`
         ${_MapSection} {
             z-index: 0;
         }
+    }
+`
+
+export const TogglersContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 7.2rem;
+    right: 1.6rem;
+    z-index: 4;
+
+    > *:first-child{
+        margin-bottom: 1.6rem;
     }
 `

@@ -8,7 +8,8 @@ const MapProvider = ({ id, children }) => {
     const options = {
         center: {lat: 0, lng: 0},
         zoom: 2,
-        disableDefaultUI: true
+        disableDefaultUI: true,
+        gestureHandling: "greedy"
       }
 
     let [map, setMap] = React.useState(null)

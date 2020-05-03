@@ -5,19 +5,22 @@ import { MapToggler, ModeToggler } from '@components'
 import * as S from './mainpage.styles'
 
 const MainPage = () => {
-    const [mapInTop, setMapInTop] = React.useState(false)
+    const [mapInTop, setMapInTop] = React.useState(true)
     return (
         <S.Container>
             <S._MapSection 
-            top={mapInTop}
+            intop={mapInTop}
             />
             <S._WeatherSection />
 
-            <MapToggler 
-            onClick={() => setMapInTop(s => !s)}
-            isDefault={!mapInTop}
-            />
-            <ModeToggler />
+            <S.TogglersContainer>
+                <ModeToggler />
+                <MapToggler 
+                 onClick={() => setMapInTop(s => !s)}
+                 isDefault={!mapInTop}
+                />
+               
+            </S.TogglersContainer>
         </S.Container>
     )
 }

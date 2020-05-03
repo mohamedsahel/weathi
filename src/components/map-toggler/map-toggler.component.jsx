@@ -2,11 +2,11 @@ import React from 'react'
 
 import { useMediaQuery } from '@hooks'
 
-import * as S from './map-toggler.styles'
+import { Toggler } from '@components'
 
 const MapToggler = props => {
     const isLarg = useMediaQuery('(min-width: 800px)')
-    return isLarg ? null : <S._Toggler 
+    return isLarg ? null : <Toggler 
           {...props}
           icon1='MapIcon'
           icon2='CloseIcon'

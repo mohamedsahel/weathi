@@ -1,14 +1,21 @@
 import React from 'react'
 
-import { Marker } from '@components'
+
+import { Map, MapPopup } from '@components'
+
+import * as S from './map-section.styles'
 
 const MapSection = (props) => {
     return (
-    <div  id='map' {...props} >
-        {/* <Marker lat='-34.397' lng='120' />
-        <Marker lat='-34.397' lng='180' /> */}
-        <Marker lat='30' lng='-10' />
-    </div>
+    <S.Container  {...props} >
+        <Map />
+        <MapPopup lat={0} lng={0} >hellow world</MapPopup>
+        <MapPopup lat={20} lng={-20} 
+        onClick={() => console.log('hi')}
+        >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quidem voluptatum beatae vitae est, assumenda nemo porro iste exercitationem minima doloremque odio omnis minus velit delectus consectetur pariatur dolorum quos?
+        </MapPopup>
+    </S.Container>
 )
 }
 
