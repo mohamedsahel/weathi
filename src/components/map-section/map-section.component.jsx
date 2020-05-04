@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-import { Map, MapPopupContainer } from '@components'
+import { Map, MapPopup } from '@components'
 
 import * as S from './map-section.styles'
 
@@ -9,9 +9,8 @@ const MapSection = (props) => {
     return (
     <S.Container  {...props} >
         <Map />
-        <MapPopupContainer anchorColor='red' >
-            hi there
-        </MapPopupContainer>
+        <MapPopup lat={20} lng={20} />
+        <MapPopup lat={0} lng={0} />
     </S.Container>
 )
 }
