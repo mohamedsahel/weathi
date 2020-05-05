@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components'
 
+import { SearchSuggestions } from '@components'
 import { SearchIcon } from '@icons'
+
 
 export const Container = styled.div`
     display: inline-flex;
@@ -10,8 +12,16 @@ export const Container = styled.div`
     background: white;
     max-width: 95%;
     border: 0.05rem solid rgba(0, 0, 0, 0.01);
-    box-shadow: 0rem 1rem 4em rgba(0, 0, 0, 0.05);
+    box-shadow: 1rem 1rem 4em rgba(0, 0, 0, 0.08);
     position: relative;
+    z-index: 4;
+`
+
+export const _SearchSuggestions = styled(SearchSuggestions)`
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    width: 100%;
     z-index: 4;
 `
 

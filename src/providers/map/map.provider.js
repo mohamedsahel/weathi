@@ -34,7 +34,7 @@ const MapProvider = ({ id, children }) => {
 
         let script = document.createElement('script')
         script.type = 'text/javascript'
-        script.src = `https://maps.google.com/maps/api/js?key=${API_KEY}`
+        script.src = `https://maps.google.com/maps/api/js?key=${API_KEY}&libraries=places`
         script.defer = true
         script.async = true
         window.document.body.appendChild(script)

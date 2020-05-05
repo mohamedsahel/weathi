@@ -10,7 +10,6 @@ export const Container = styled.header`
     max-width: 100%;
     padding-bottom: 4rem;
     padding-top: 1.6rem;
-    overflow: hidden;
 `
 
 export const LocationContainer = styled.div`
