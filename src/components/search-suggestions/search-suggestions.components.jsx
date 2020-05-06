@@ -21,7 +21,7 @@ const SearchSuggestions = ({ suggestions, onSuggestionClick, ...otherProps }) =>
             suggestions.map((suggestion, index) => <Suggestion 
             suggestion={suggestion} 
             key={index} 
-            onClick={() => onSuggestionClick(suggestion.place_id)}
+            onClick={() => onSuggestionClick(suggestion.place_id, suggestion.description)}
             />)
         }
         </S.Container>

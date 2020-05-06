@@ -1,5 +1,7 @@
 import React from 'react'
 
+import WeatherContext from '@providers/weather/weather.context'
+
 import { SearchBar } from '@components'
 
 import * as S from './header.styles'
@@ -12,10 +14,12 @@ const CurrentLocation = ({ location }) => (
 )
 
 const Header = () => {
+    const [state] = React.useContext(WeatherContext)
+    const location = state.address
     return (
         <S.Container >
             <SearchBar/>
-            <CurrentLocation location='Paris, Frensh' />
+            <CurrentLocation location={location} />
         </S.Container>
     )
 }

@@ -13,13 +13,13 @@ const MapPopupContainer = ({children, lat, lng , ...otherProps}) => {
         if(map) {
             const Popup = createPopupClass()
             const popup = new Popup({
-                position: new window.google.maps.LatLng(lat, lng, 0),
+                position: new window.google.maps.LatLng(lat, lng),
                 popupDiv: popupRef.current
             })
 
             popup.setMap(map)
           }
-    }, [map, popupRef])
+    }, [map, popupRef, lat, lng])
 
     
     return (

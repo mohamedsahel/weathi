@@ -7,7 +7,7 @@ const MapProvider = ({ id, children }) => {
 
     const options = {
         center: {lat: 0, lng: 0},
-        zoom: 2,
+        zoom: 3,
         minZoom: 2,
         disableDefaultUI: true,
         gestureHandling: "greedy",

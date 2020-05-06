@@ -6,8 +6,8 @@ import * as S from './tabs.styles'
 
 const TABS = {
     1: <CitiesPreview />,
-    2: <WeatherTable time='daily' />,
-    3: <WeatherTable time='hourly' />
+    2: <WeatherTable time='daily' key={1} />,
+    3: <WeatherTable time='hourly' key={2} />
 }
 
 const Tabs = (props) => {
