@@ -19,20 +19,6 @@ const MapSection = (props) => {
         icon={weather.current.icon}
         selected={true}
         />
-        <MapPopup 
-        lat={0} 
-        lng={0} 
-        temp={weather.current.temp}
-        city={weather.city}
-        icon={weather.current.icon}
-        />
-        <MapPopup 
-        lat={30} 
-        lng={-100} 
-        temp={weather.current.temp}
-        city={weather.city}
-        icon={weather.current.icon}
-        />
     </S.Container>
 )
 }

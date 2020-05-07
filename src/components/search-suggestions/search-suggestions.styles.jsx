@@ -9,6 +9,7 @@ export const Row = styled.div`
     overflow: hidden;
     text-overflow: ellipsis;
     color: black;
+    cursor: default;
 
     &:hover {
         background: rgb(245, 245, 245);

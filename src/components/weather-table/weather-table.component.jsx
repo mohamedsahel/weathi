@@ -8,7 +8,7 @@ import { TempDegree } from "@components"
 
 import * as S from './weather-table.styles'
 
-const WeatherTableRow = ({ data:{name, temp, icon}, otherProps }) => {
+const WeatherTableRow = ({ data:{name, temp, icon}, ...otherProps }) => {
     return (
         <S.TableRow {...otherProps} >
             <span>{name}</span>
@@ -28,7 +28,7 @@ const WeatherTable = ({time='daily'}) => {
                     weather.map((data, index) => <WeatherTableRow 
                     key={index}
                     data={data}
-                    selected={true} 
+                    selected={index === 0}
                     />)
                 }
             </FadeIn>

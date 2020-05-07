@@ -32,7 +32,7 @@ const SearchBar = () => {
         else setExpanded(false)
     }
 
-    const handleSuggestionClick = (placeId, suggestionDescription) => {
+    const handleSuggestionClick = (placeId) => {
         let request = {
             placeId: placeId,
             fields: ['name', 'geometry', 'formatted_address']
@@ -55,9 +55,9 @@ const SearchBar = () => {
 
             sessionToken.current = new window.google.maps.places.AutocompleteSessionToken()
 
+
             const handleSuggestions = (suggestions, status) => {
                 if(status != window.google.maps.places.PlacesServiceStatus.OK) {
-                    console.log(status)
                     setSuggestions([])
                     return 
                 }

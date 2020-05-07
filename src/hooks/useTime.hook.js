@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export default function useDate(refreshDelay) {
+export default function useTime(refreshDelay) {
     const [date, setDate] = React.useState({})
 
     React.useEffect(() => {

@@ -44,6 +44,7 @@ export const Table = styled.div`
     width: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
+    padding-bottom: 1rem;
 
     > .fadeIn {
         display: flex;
