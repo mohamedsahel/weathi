@@ -2,6 +2,7 @@ import React from 'react'
 
 import WeatherContext from '@providers/weather/weather.context'
 
+import SammaryLoader from './sammary.palceholder'
 import { TempDegree } from '@components'
 
 import * as S from './sammary.styles'
@@ -11,8 +12,14 @@ const Sammary = () => {
     return (
         <S.Container >
             <S._Time />
-            <S._WeatherIcon icon={state.current.icon} />
-            <TempDegree value={state.current.temp} size='14rem' />
+            {
+                state.isFetching ? <SammaryLoader />
+                : <>
+                    <S._WeatherIcon icon={state.current.icon} />
+                    <TempDegree value={state.current.temp} size='14rem' />
+                </>
+            }
+            
         </S.Container>
     )
 }

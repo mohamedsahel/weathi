@@ -2,6 +2,7 @@ import React from 'react'
 
 import WeatherContext from '@providers/weather/weather.context'
 
+import CurrentLocationLoader from './header.placeholder'
 import { SearchBar } from '@components'
 
 import * as S from './header.styles'
@@ -19,7 +20,11 @@ const Header = () => {
     return (
         <S.Container >
             <SearchBar/>
-            <CurrentLocation location={location} />
+            {
+                state.isFetching ? <CurrentLocationLoader />
+                : <CurrentLocation location={location} />
+            }
+            
         </S.Container>
     )
 }

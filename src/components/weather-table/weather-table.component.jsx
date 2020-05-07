@@ -1,35 +1,32 @@
 import React from 'react'
 import FadeIn from 'react-fade-in'
 
-import WeatherContext from '@providers/weather/weather.context'
 
 import { TempDegree } from "@components"
 
-
 import * as S from './weather-table.styles'
 
-const WeatherTableRow = ({ data:{name, temp, icon}, ...otherProps }) => {
+const WeatherTableColumn = ({ data:{name, temp, icon}, ...otherProps }) => {
     return (
-        <S.TableRow {...otherProps} >
+        <S.TableColumn {...otherProps} >
             <span>{name}</span>
             <TempDegree value={temp} />
             <S._WeatherIcon icon={icon} />
-        </S.TableRow>
+        </S.TableColumn>
     )
 }
 
-const WeatherTable = ({time='daily'}) => {
-    const [state] = React.useContext(WeatherContext)
-    const weather = state[time]
+const WeatherTable = ({weather}) => {
     return (
         <S.Table >
             <FadeIn className='fadeIn' >
                 {
-                    weather.map((data, index) => <WeatherTableRow 
-                    key={index}
-                    data={data}
-                    selected={index === 0}
-                    />)
+                    weather.map((data, index) => <WeatherTableColumn 
+                            key={index}
+                            data={data}
+                            selected={index === 0}
+                        />
+                    )
                 }
             </FadeIn>
         </S.Table>

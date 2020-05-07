@@ -12,7 +12,7 @@ export const TabsHeader = styled.div`
     font-size: 1.6rem;
     padding-bottom: 3rem;
     color: ${p => p.theme.colors.halfDark};
-    width: 80%;
+    width: min(80%, 24rem);
 `
 
 export const TabLink = styled.span`

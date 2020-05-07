@@ -1,44 +1,18 @@
 import React from 'react'
 import WeatherContext from './weather.context'
 
-
 import { getCurrentWeather, getDailyForecast, getHourlyForecast } from '@global/utils/weather.utils'
 
 const INITIAL_STATE = {
     address: 'Meknes, Morroco',
     city: '',
-    geometry: {
-        lat: '20.33',
-        lng: '30.68'
-    },
+    geometry: {},
     current: {
         temp: 23,
         icon: '04n'
     },
-    daily: [
-        {
-            name: 'mon',
-            temp: 27,
-            icon: '09n'
-        },
-        {
-            name: 'tur',
-            temp: 29,
-            icon: '10n'
-        }
-    ],
-    hourly: [
-        {
-            name: '12',
-            temp: 27,
-            icon: '11n'
-        },
-        {
-            name: '01',
-            temp: 29,
-            icon: '10n'
-        }
-    ],
+    daily: [],
+    hourly: [],
     isFetching: true,
     error: null
 }
@@ -71,9 +45,8 @@ const weatherReducer = (state, action) => {
             }
         case 'SET_WEATHER_STATE': 
             return {
-                ...state,
                 ...payload,
-                isFetching: true
+                isFetching: false
             }
 
         default :
@@ -83,7 +56,6 @@ const weatherReducer = (state, action) => {
 
 const WeatherProvider = ({ children }) => {
     const [state, dispatch] = React.useReducer(weatherReducer, INITIAL_STATE)
-    const didUpdate = React.useRef(false)
 
     const fetchAsync = city => {
         dispatch({
@@ -124,12 +96,7 @@ const WeatherProvider = ({ children }) => {
             })
     }
 
-    React.useEffect(() => {
-        if (didUpdate.current) {
-            window.localStorage.setItem('weather', JSON.stringify(state))
-        } else didUpdate.current = true
-    }, [state])
-
+    
     return (
         <WeatherContext.Provider value={[state, fetchAsync, dispatch]} >
             {children}

@@ -10,7 +10,9 @@ export const getCurrentWeather = current =>
 
 
 export const getDailyForecast = days => 
-    days.map(day => ({
+    days
+    .filter((day, index) => index < 7)
+    .map(day => ({
         name: date(day.dt).day,
         temp: Math.floor(day.temp.day),
         icon: day.weather[0].icon

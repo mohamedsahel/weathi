@@ -5,8 +5,8 @@ import { WeatherTable } from "@components"
 import * as S from './tabs.styles'
 
 const TABS = {
-    1: <WeatherTable time='daily' key={1} />,
-    2: <WeatherTable time='hourly' key={2} />
+    1: <WeatherTable time='hourly' key={1} />,
+    2: <WeatherTable time='daily' key={2} />
 }
 
 const Tabs = (props) => {
@@ -16,7 +16,7 @@ const Tabs = (props) => {
         <S.Container {...props}>
             <S.TabsHeader>
                 {
-                    ['Daily', 'Hourly']
+                    ['Today', 'This Week']
                     .map((item, index) => 
                         <S.TabLink
                         key={index}

@@ -8,7 +8,7 @@ import { MapToggler, ModeToggler } from '@components'
 import * as S from './mainpage.styles'
 
 const MainPage = () => {
-    const [mapInTop, setMapInTop] = React.useState(true)
+    const [mapInTop, setMapInTop] = React.useState(false)
     const [weather, fetchAsync, dispatch] = React.useContext(WeatherContext)
     const map = React.useContext(MapContext)
 

@@ -13,12 +13,12 @@ function App() {
   return (
     <ModeProvider>
         <Theme>
-          <MapProvider id='map' >
-            <WeatherProvider>
+          <WeatherProvider>
+            <MapProvider id='map' >
               <GlobalStyles />
               <MainPage />
-            </WeatherProvider>
-          </MapProvider>
+            </MapProvider>
+          </WeatherProvider>
         </Theme>
     </ModeProvider>
   )

@@ -9,6 +9,10 @@ const communStyles = {
 }
 
 export const lightTheme = {
+    placeHolder: {
+        background: 'rgba(255, 255, 255)',
+        foreground: 'rgba(248, 248, 248)'
+    },
     colors: {
         light: 'rgb(243, 251, 255)',
         dark: 'rgb(33, 43, 91)',
@@ -23,6 +27,10 @@ export const lightTheme = {
 }
 
 export const darkTheme = {
+    placeHolder: {
+        background: 'rgba(252, 252, 252, 0.1)',
+        foreground: 'rgba(248, 248, 248, 0.2)'
+    },
     colors: {
         light: 'rgb(33, 43, 91)',
         dark: 'rgb(243, 251, 255)',

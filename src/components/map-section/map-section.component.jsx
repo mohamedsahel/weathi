@@ -11,14 +11,17 @@ const MapSection = (props) => {
     return (
     <S.Container  {...props} >
         <Map />
-        <MapPopup 
-        lat={weather.geometry.lat} 
-        lng={weather.geometry.lng} 
-        temp={weather.current.temp}
-        city={weather.city}
-        icon={weather.current.icon}
-        selected={true}
-        />
+        {
+            !!weather.geometry.lat &&
+            <MapPopup 
+                lat={weather.geometry.lat} 
+                lng={weather.geometry.lng} 
+                temp={weather.current.temp}
+                city={weather.city}
+                icon={weather.current.icon}
+                selected={true}
+            />
+        }
     </S.Container>
 )
 }
