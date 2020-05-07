@@ -19,6 +19,10 @@ const TableLoader = () => {
             <rect x="320" y="0" rx="20" ry="20" width="70" height="160" />
             <rect x="400" y="0" rx="20" ry="20" width="70" height="160" />
             <rect x="480" y="0" rx="20" ry="20" width="70" height="160" />
+            <rect x="560" y="0" rx="20" ry="20" width="70" height="160" />
+            <rect x="640" y="0" rx="20" ry="20" width="70" height="160" />
+            <rect x="720" y="0" rx="20" ry="20" width="70" height="160" />
+            <rect x="800" y="0" rx="20" ry="20" width="70" height="160" />
         </ContentLoader>
     )
 }
