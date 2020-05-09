@@ -9,12 +9,19 @@ export const Container = styled.div`
     align-items: center;
     border-radius: 1.6rem;
     padding: 1.6rem;
+    padding-left: 0;
     background: white;
     max-width: 95%;
+    width: 5rem;
     border: 0.05rem solid rgba(0, 0, 0, 0.01);
     box-shadow: 1rem 1rem 4em rgba(0, 0, 0, 0.08);
     position: relative;
     z-index: 4;
+    transition: all 0.3s;
+
+    ${p => p.isExpanded && css`
+        width: 38rem;
+    ` }
 `
 
 export const _SearchSuggestions = styled(SearchSuggestions)`
@@ -31,11 +38,13 @@ export const Input = styled.input`
     font-size: 1.6rem;
     background: transparent;
     border: none;
+    opacity: 0;
     transition: all 0.3s;
 
     ${p => p.isExpanded && css`
         width: 24rem;
-        margin-left: 1.6rem;
+        margin-left: 5.4rem;
+        opacity: 1;
     ` }
 
     &::placeholder {
@@ -45,7 +54,11 @@ export const Input = styled.input`
 `
 
 export const _SearchIcon = styled(SearchIcon)`
-    min-width: 1.8rem;
-    min-height: 1.8rem;
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    min-width: 5rem;
+    min-height: 5rem;
+    padding: 1.4rem;
     fill: rgb(154, 161, 181);
 `

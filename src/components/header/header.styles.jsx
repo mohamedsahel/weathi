@@ -16,11 +16,14 @@ export const LocationContainer = styled.div`
     display: inline-flex;
     align-items: center;
     margin-left: 6rem;
+    max-width: 20rem;
 `
 
 export const _LocationMarker = styled(LocationMarkerIcon)`
     height: 1.8rem;
     width: 1.8rem;
+    min-height: 1.8rem;
+    min-width: 1.8rem;
     margin-right: 1.2rem;
     fill: ${p => p.theme.colors.dark};
 `

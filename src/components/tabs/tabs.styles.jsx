@@ -2,7 +2,8 @@ import styled, {css} from 'styled-components'
 
 export const Container = styled.div`
     width: 100%;
-    margin-top: 12vh;
+    margin-top: 14vh;
+    margin-bottom: 2rem;
     text-align: center;
 `
 

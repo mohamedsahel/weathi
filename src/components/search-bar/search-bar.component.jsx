@@ -83,7 +83,9 @@ const SearchBar = () => {
     }, [map])
 
     return (
-        <S.Container>
+        <S.Container
+        isExpanded={isLarg || isExpanded}
+        >
             <S._SearchIcon 
             onClick={handleIconClick}
             />

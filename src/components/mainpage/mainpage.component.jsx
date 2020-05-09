@@ -14,40 +14,44 @@ const MainPage = () => {
 
     React.useEffect(() => {
         if(map) {
-            const weatherStorage = window.localStorage.getItem('weather')
-            if(weatherStorage) {
-                dispatch({
-                    type: 'SET_WEATHER_STATE',
-                    payload: JSON.parse(weatherStorage)
-                })
+            const geocoder = new window.google.maps.Geocoder
 
-            } else {
-                const geocoder = new window.google.maps.Geocoder
-
-                navigator.permissions.query({name:'geolocation'})
-                .then(res => {
-                    if(res.state === 'denied') {
-                        alert('Please, enable the location and reload to see the weather in your city')
+            const fetchByLatLng = latLng => {
+                geocoder.geocode(
+                    {'location': latLng}, 
+                    (results, status) => {
+                        const place = results[1]
+                        place.name = place.address_components[0].long_name
+                        fetchAsync(place)
                     }
-                    else {
-                        
-                        navigator.geolocation.getCurrentPosition(position => {
-                            const latLng = {
-                                lat: position.coords.latitude,
-                                lng: position.coords.longitude
-                            }
-            
-                            geocoder.geocode({'location': latLng}, (results, status) => {
-                                const place = results[1]
-                                place.name = place.address_components[0].long_name
-                                fetchAsync(place)
-            
-                            })
-                        })
-                    }
-                })
-
+                )
             }
+
+            navigator.permissions.query({name:'geolocation'})
+            .then(res => {
+                if(res.state === 'denied') {
+                    fetch('http://ip-api.com/json')
+                    .then(res => res.json())
+                    .then(data => {
+                        fetchByLatLng({
+                            lat: data.lat,
+                            lng: data.lon
+                        })
+                    })
+                }
+                else {
+                    
+                    navigator.geolocation.getCurrentPosition(position => {
+                        const latLng = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude
+                        }
+                        
+                        fetchByLatLng(latLng)
+                    })
+                }
+            })
+
         }
     }, [map])
 
