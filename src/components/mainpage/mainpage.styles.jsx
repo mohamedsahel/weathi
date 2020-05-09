@@ -29,7 +29,7 @@ export const TogglersContainer = styled.div`
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 7.2rem;
+    top: 7.1rem;
     right: 1.6rem;
     z-index: 4;
 

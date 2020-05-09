@@ -27,7 +27,7 @@ const MainPage = () => {
                 navigator.permissions.query({name:'geolocation'})
                 .then(res => {
                     if(res.state === 'denied') {
-                        alert('Please, enable the location to see the weather in your city')
+                        alert('Please, enable the location and reload to see the weather in your city')
                     }
                     else {
                         
